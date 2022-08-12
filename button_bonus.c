@@ -50,7 +50,7 @@ void	ft_droit(t_map *map, int k)
 	}
 	if (map->map[i][j + 1] == 'n')
 	{
-		printf("you Lost\n");
+		write(1, "you Lost\n", 9);
 		exit(0);
 	}
 	if (ft_count_collect(map) == 0 && map->map[i][j + 1] == 'E')
@@ -77,7 +77,7 @@ void	ft_gauche(t_map *map, int k)
 	}
 	if (map->map[i][j - 1] == 'n')
 	{
-		printf("you Lost\n");
+		write(1, "you Lost\n", 9);
 		exit(0);
 	}
 	else if (ft_count_collect(map) == 0 && map->map[i][j - 1] == 'E')
