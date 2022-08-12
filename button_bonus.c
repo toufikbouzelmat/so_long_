@@ -106,7 +106,7 @@ void	ft_haut(t_map *map, int k)
 	}
 	if (map->map[i + 1][j] == 'n')
 	{
-		printf("you Lost\n");
+		write(1, "you Lost\n", 9);
 		exit(0);
 	}
 	else if (ft_count_collect(map) == 0 && map->map[i + 1][j] == 'E')
@@ -135,7 +135,7 @@ void	ft_bas(t_map *map, int k)
 	}
 	if (map->map[i - 1][j] == 'n')
 	{
-		printf("you Lost\n");
+		write(1, "you Lost\n", 9);
 		exit(0);
 	}
 	else if (ft_count_collect(map) == 0 && map->map[i - 1][j] == 'E')
